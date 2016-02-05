@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nyu.tandon.cs9033.gameralarm" >
+
+
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity android:name=".controllers.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controllers.BallGameActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".controllers.AddAlarmActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".controllers.NormalAlarmActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <receiver
+            android:name=".controllers.AlarmReceiver"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="nyu.tandon.cs9033.gameralarm.Alarm" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".controllers.JewelsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".controllers.SetFontActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".controllers.QuizActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>
